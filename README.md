@@ -1,6 +1,14 @@
 # jQuery.scrollTo
 
 Lightweight, cross-browser and highly customizable animated scrolling with jQuery
+轻量级，跨浏览器和高度可定制的动画滚动与jQuery
+
+
+### jquery cdn
+http://apps.bdimg.com/libs/jquery/1.11.3/jquery.js
+
+
+
 
 [![](http://api.flattr.com/button/flattr-badge-large.png)](http://flattr.com/thing/2081384/fleslerjquery-scrollTo-on-GitHub)
 [![GitHub version](https://badge.fury.io/gh/flesler%2Fjquery.scrollTo.svg)](http://badge.fury.io/gh/flesler%2Fjquery.scrollTo)
@@ -45,6 +53,7 @@ If your problem is not solved then go ahead and [report the issue](https://githu
 ## Usage
 
 jQuery.scrollTo's signature is designed to resemble [$().animate()](http://api.jquery.com/animate/).
+签名设计类似于
 
 ```js
 $(element).scrollTo(target[,duration][,settings]);
@@ -53,7 +62,7 @@ $(element).scrollTo(target[,duration][,settings]);
 ### _element_
 
 This must be a scrollable element, to scroll the whole window use `$(window)`.
-
+这必须是一个滚动元件，滚动整个窗口的使用
 ### _target_
 
 This defines the position to where `element` must be scrolled. The plugin supports all these formats:
@@ -61,25 +70,36 @@ This defines the position to where `element` must be scrolled. The plugin suppor
  * A string with a fixed position with px: `"250px"`
  * A string with a percentage (of container's size): `"50%"`
  * A string with a relative step: `"+=50px"`
- * An object with `left` and `top` containining any of the aforementioned: `{left:250, top:"50px"}`
+ * An object with `left` and `top` containining any of the aforementioned: `{left:250, top:"50px"}` 装有上述任何
  * The string `"max"` to scroll to the end.
  * A string selector that will be relative to the element to scroll: `".section:eq(2)"`
+ * 与滚动元素相关的字符串选择器。
+ *  
  * A DOM element, probably a child of the element to scroll: `document.getElementById("top")`
+ * 一个DOM元素，可能是要滚动的元素的子元素。
+ *
  * A jQuery object with a DOM element: `$("#top")`
 
 ### _settings_
 
 The `duration` parameter is a shortcut to the setting with the same name.
-These are the supported settings:
+具有相同名称的设置的快捷方式。
+
+These are the supported settings: 
  * __axis__: The axes to animate: `xy` (default), `x`, `y`, `yx`
  * __interrupt__: If `true` will cancel the animation if the user scrolls. Default is `false`
  * __limit__: If `true` the plugin will not scroll beyond the container's size. Default is `true`
- * __margin__: If `true`, subtracts the margin and border of the `target` element. Default is `false`
+ * 如果“真”，插件将不会滚动超出容器的大小
+ 
+ * __margin__: If `true`, subtracts the margin and border of the `target` element. Default is `false`  如果`真`，减去边缘和边界的`目标`元。默认为“false”
+ 
  * __offset__: Added to the final position, can be a number or an object with `left` and `top`
  * __over__: Adds a % of the `target` dimensions: `{left:0.5, top:0.5}`
  * __queue__: If `true` will scroll one `axis` and then the other. Default is `false`
- * __onAfter(target, settings)__: A callback triggered when the animation ends (jQuery's `complete()`)
- * __onAfterFirst(target, settings)__: A callback triggered after the first axis scrolls when queueing
+ * __onAfter(target, settings)__: A callback triggered when the animation ends (jQuery's `complete()`) 动画结束回调
+ 
+ 
+ * __onAfterFirst(target, settings)__: A callback triggered after the first axis scrolls when queueing 在排队时第一个轴滚动后触发的回调。
 
 You can add any setting supported by [$().animate()](http://api.jquery.com/animate/#animate-properties-options) as well:
 
@@ -138,6 +158,9 @@ If you don't want to include another plugin, you can try using something like [t
 ### [jQuery.serialScroll](https://github.com/flesler/jquery.serialScroll)
 
 This plugin simplifies the creation of scrolling slideshows.
+
+
+
 
 ## License
 

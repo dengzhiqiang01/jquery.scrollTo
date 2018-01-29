@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>1-$.scrollTo(...)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background: #000;
+            color: deeppink;
+            font-size: 18px;
+        }
+
+        li {
+            height: 100px;
+            background: #000;
+        }
+
+        li:nth-child(2n+1) {
+            background: deeppink;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../jquery.scrollTo.js"></script>
+<script>
+    $.scrollTo('max', 3000, function () {
+        console.log('滚动完成!');
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.$(...).scrollTo('li：eq(7)', 800)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            background: #000;
+            color: deeppink;
+            font-size: 18px;
+        }
+
+        button {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        li {
+            height: 100px;
+            background: #000;
+        }
+
+        li:nth-child(2n+1) {
+            background: deeppink;
+        }
+
+        .target {
+            background: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<button>点我滚动到目标元素</button>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li class="target">我马上就要显示了！</li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="../jquery.scrollTo.js"></script>
+<script>
+    $('button').click(function () {
+        // $('.target').eq(0) 滚动到这个元素显示在窗口的
+        $(window).scrollTo($('.target').eq(0), 3000);
+    });
+</script>
+
+</body>
+</html>
